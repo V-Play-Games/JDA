@@ -2054,7 +2054,7 @@ public class GuildImpl implements Guild
     protected void checkPosition(UserSnowflake user)
     {
         Member member = resolveMember(user);
-        if(member != null && !getSelfMember().canInteract(member))
+        if(!getSelfMember().canInteract(member))
             throw new HierarchyException("Can't modify a member with higher or equal highest role than yourself!");
     }
 
